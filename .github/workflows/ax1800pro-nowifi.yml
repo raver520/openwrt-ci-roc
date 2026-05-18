@@ -128,11 +128,11 @@ jobs:
       if: steps.compile.outputs.status == 'success'
       run: |
         cd $OPENWRT_PATH/bin/targets/*/*
-        cp $OPENWRT_PATH/.config Arthur.Athena.Taiyi.NoWiFi.config
-        mv config.buildinfo Arthur.Athena.Taiyi.NoWiFi.config.buildinfo
-        mv immortalwrt-qualcommax-ipq60xx.manifest Arthur.Athena.Taiyi.NoWiFi.manifest
+        cp $OPENWRT_PATH/.config Arthur.NoWiFi.config
+        mv config.buildinfo Arthur.NoWiFi.config.buildinfo
+        mv immortalwrt-qualcommax-ipq60xx.manifest Arthur.NoWiFi.manifest
         mv -f $OPENWRT_PATH/bin/packages/*/*/*.ipk packages
-        tar -zcf Arthur.Athena.Taiyi.NoWiFi.Packages.tar.gz packages
+        tar -zcf Arthur.NoWiFi.Packages.tar.gz packages
         for file in *qualcommax*.bin; do
             mv "$file" "${file//qualcommax/nowifi}"
         done

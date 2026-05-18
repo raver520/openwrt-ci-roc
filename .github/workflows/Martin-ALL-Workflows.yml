@@ -1,0 +1,17 @@
+name: Martin-ALL-Workflows  # 主要工作流的名称
+
+on:
+  workflow_dispatch:  # 手动触发：通过 GitHub UI 来触发
+  #schedule:
+  #  - cron: 0 20 * * 5  # 北京时间星期六凌晨4点，定时触发
+
+jobs:
+
+    ax1800pro-nowifi:
+      uses: ./.github/workflows/ax1800pro-nowifi.yml
+
+    zn-m2-ImmortalWrt:
+      uses: ./.github/workflows/zn-m2-ImmortalWrt.yml
+
+    x86-ImmortalWrt:
+      uses: ./.github/workflows/x86-ImmortalWrt.yml

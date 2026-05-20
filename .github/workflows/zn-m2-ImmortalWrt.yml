@@ -8,7 +8,7 @@ on:
 
 env:
   REPO_URL: https://github.com/laipeng668/openwrt-6.x.git
-  REPO_BRANCH: master
+  REPO_BRANCH: main-nss
   CONFIG_FILE: configs/zn_m2.config
   GENERAL_CONFIG_FILE: configs/martin.config
   DIY_SCRIPT: scripts/zn-m2-script.sh

@@ -55,7 +55,7 @@ jobs:
         git clone --depth 1 -b $REPO_BRANCH --single-branch $REPO_URL /mnt/openwrt
         cd /mnt/openwrt
         echo "OPENWRT_PATH=$PWD" >> $GITHUB_ENV
-        VERSION_INFO=$(git show -s --date=short --format="作者: Martinn<br/>时间: %cd<br/>内容: %s<br/>hash: %H")
+        VERSION_INFO=$(git show -s --date=short --format="作者: Martin<br/>时间: %cd<br/>内容: %s<br/>hash: %H")
         echo "VERSION_INFO=$VERSION_INFO" >> $GITHUB_ENV
         VERSION_KERNEL=$(grep -oP 'LINUX_KERNEL_HASH-\K[0-9]+\.[0-9]+\.[0-9]+' target/linux/generic/kernel-6.12)
         echo "VERSION_KERNEL=$VERSION_KERNEL" >> $GITHUB_ENV
@@ -152,7 +152,7 @@ jobs:
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
-          - 🌐 默认地址: **192.168.2.1**
+          - 🌐 默认地址: **192.168.4.1**
           - 🔑 默认密码: none
           ### 🧊 固件版本
           - 固件内核版本：**${{ env.VERSION_KERNEL }}**

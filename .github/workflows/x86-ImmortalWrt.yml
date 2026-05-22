@@ -10,7 +10,7 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt.git
   REPO_BRANCH: master
   CONFIG_FILE: configs/x86.config
-  GENERAL_CONFIG_FILE: configs/martin.config
+  GENERAL_CONFIG_FILE: configs/General.config
   DIY_SCRIPT: scripts/x86-script.sh
   CLASH_KERNEL: amd64
   FIRMWARE_TAG: x86-64

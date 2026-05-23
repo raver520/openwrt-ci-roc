@@ -100,6 +100,7 @@ jobs:
     - name: Load Custom Configuration(加载自定义配置)
       run: |
         chmod +x $DIY_SCRIPT
+        sed -i -e 's/frp-binary/frp-binary-toml/g' -e 's/\<frp\>/frp-toml/g' "$DIY_SCRIPT"
         cd $OPENWRT_PATH
         $GITHUB_WORKSPACE/$DIY_SCRIPT
 
